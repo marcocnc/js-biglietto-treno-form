@@ -10,18 +10,36 @@ buttonGenerate.addEventListener('click', function(){
     const discount20 = 20;
     const discount40 = 40;
 
-    const priceTicketStandard = chilometers * priceKm;
+    let priceTicket = chilometers * priceKm;
     
+    let offerta = 'Offerta standard';
 
     if(range == 'minorenne'){
-        const priceDiscounted20 = priceTicketStandard * discount20 / 100;
-        const priceTicketMin = priceTicketStandard - priceDiscounted20;
+        const priceDiscounted20 = priceTicket * discount20 / 100;
+        const priceTicketMin = priceTicket - priceDiscounted20;
+        priceTicket = priceTicketMin;
+        offerta = 'Sconto Minorenni';
         console.log(priceTicketMin);
     }else if(range == 'over65'){
-        const priceDiscounted40 = priceTicketStandard * discount40 / 100;
-        const priceTicketOver = priceTicketStandard - priceDiscounted40;
+        const priceDiscounted40 = priceTicket * discount40 / 100;
+        const priceTicketOver = priceTicket - priceDiscounted40;
+        priceTicket = priceTicketOver;
+        offerta = 'Sconto Over 65';
         console.log(priceTicketOver);
     }else{
-        console.log(priceTicketStandard);
+        console.log(priceTicket);
     }
+
+    // Stampare nome utente
+    document.getElementById('utente').innerHTML = userName;
+
+    // Stampare offerta 
+    document.getElementById('offerta').innerHTML = offerta;
+
+    // Stampare prezzo
+    document.getElementById('prezzobiglietto').innerHTML = priceTicket.toFixed(2);
+
+
+
+    
 })

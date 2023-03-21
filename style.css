@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+#biglietto{
+    margin-top: 20px;
+    display: flex;
+}
+
+.viaggiatore span{
+    display: block;
+    
+}
+
+table th, td{
+    padding: 0 30px;
+}
