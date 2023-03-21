@@ -11,6 +11,5 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del bigliett
 
 ## Logica
 1. Creare gli input e i bottoni nel file HTML;
-2. Dichiarare le variabili (prezzo al km, sconti, età passeggero e km da percorrere);
-3. Richiamare il primo bottone con .querySelect e aggiungergli la funzione .addEventListener(click);
+3. Richiamare il primo bottone, aggiungergli la funzione .addEventListener(click) e dichiarare le variabili (prezzo al km, sconti, età passeggero e km da percorrere);
 4. All'interno di questa funzione inserire la condizione in cui si calcolano i prezzi in base all'età (quindi se minorenne, maggiorenne o over65);
