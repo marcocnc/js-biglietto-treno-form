@@ -3,6 +3,7 @@ buttonGenerate.addEventListener('click', function(){
     
     const userName = document.getElementById('nameuser').value;
     const chilometers = parseInt(document.getElementById('km').value);
+    const range = document.getElementById('agerange').value;
     console.log(userName, chilometers);
 
     const priceKm = 0.21;
@@ -10,14 +11,17 @@ buttonGenerate.addEventListener('click', function(){
     const discount40 = 40;
 
     const priceTicketStandard = chilometers * priceKm;
-    console.log(priceTicketStandard);
+    
 
-    if(agerange == 'minorenne'){
+    if(range == 'minorenne'){
         const priceDiscounted20 = priceTicketStandard * discount20 / 100;
-        console.log(priceDiscounted20);
-    }
-    if(agerange == 'over65'){
+        const priceTicketMin = priceTicketStandard - priceDiscounted20;
+        console.log(priceTicketMin);
+    }else if(range == 'over65'){
         const priceDiscounted40 = priceTicketStandard * discount40 / 100;
-        console.log(priceDiscounted40);
+        const priceTicketOver = priceTicketStandard - priceDiscounted40;
+        console.log(priceTicketOver);
+    }else{
+        console.log(priceTicketStandard);
     }
 })
