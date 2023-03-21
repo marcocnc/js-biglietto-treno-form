@@ -9,36 +9,56 @@
 </head>
 <body>
     <div class="container">
-
-        <input type="text" id="nameuser" placeholder="Nome e Cognome">
-        <input type="text" id="km" placeholder="Km da percorrere">
-        <select id="agerange">
-            <option value="minorenne">Minorenne</option>
-            <option value="maggiorenne">Maggiorenne</option>
-            <option value="over65">Over 65</option>
-        </select>
-        <button id="generate">Genera</button>
-        <button id="reset">Annulla</button>
+       <div class="cta">
+            <div class="row">
+             <div class="col">
+                <h3>Nome e Cognome</h3>
+                <input type="text" id="nameuser" placeholder="Nome e Cognome">
+                </div>
+             <div class="col">
+                    <h3>Km da percorrere</h3>
+                    <input type="text" id="km" placeholder="Km da percorrere">
+                </div>
+                <div class="col">
+                    <h3>Selezionare fascia d'età</h3>
+                    <select id="agerange">
+                        <option value="minorenne">Minorenne</option>
+                        <option value="maggiorenne">Maggiorenne</option>
+                        <option value="over65">Over 65</option>
+                    </select>
+                </div>
+            </div>
+         <div class="row">
+                <button id="generate" class="bottone">Genera</button>
+                <button id="reset" class="bottone">Annulla</button>
+            </div>
+        </div>
     
         <!-- Biglietto -->
+        <div class="row">
+            <h2>Il tuo biglietto</h2>
+        </div>
         <div id="biglietto">
-            <div class="viaggiatore">
-                <span>Nome Utente</span>
-                <span id="utente"></span>
-            </div>
-            <div class="dati">
-                <table>
-                    <tr>
-                        <th >Offerta</th>
-                        <th>Carrozza</th>
-                        <th>Codice CP</th>
-                        <th >Costo Biglietto</th>
-                    </tr>
-                    <td id="offerta"></td>
-                    <td></td>
-                    <td></td>
-                    <td id="prezzobiglietto"></td>
-                </table>
+            <div id="info-biglietto">
+                <div class="viaggiatore">
+                    <h2>Nome Utente</h2>
+                    <h4 id="utente"></h4>
+                </div>
+                <div class="dati">
+                    <table>
+                        <tr>
+                            <th >Offerta</th>
+                            <th>Carrozza</th>
+                            <th>Codice CP</th>
+                            <th >Costo Biglietto</th>
+                        </tr>
+                        <td id="offerta"></td>
+                        <td id="carrozza"></td>
+                        <td id="codice"></td>
+                        <td id="prezzobiglietto"></td>
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>

@@ -29,7 +29,11 @@ buttonGenerate.addEventListener('click', function(){
     }else{
         console.log(priceTicket);
     }
-
+    
+    // Numeri casuali per carrozza e codice cp
+    let carrozza = Math.floor(Math.random() * 9) +1;
+    let cp = Math.floor(Math.random() * (100000 - 90000 + 1 )) + 90000;
+    
     // Stampare nome utente
     document.getElementById('utente').innerHTML = userName;
 
@@ -39,7 +43,7 @@ buttonGenerate.addEventListener('click', function(){
     // Stampare prezzo
     document.getElementById('prezzobiglietto').innerHTML = priceTicket.toFixed(2);
 
-
-
-    
+    // Stampare carrozza e codice cp
+    document.getElementById('carrozza').innerHTML = carrozza;
+    document.getElementById('codice').innerHTML = cp;
 })
