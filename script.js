@@ -12,7 +12,7 @@ buttonGenerate.addEventListener('click', function(){
 
     let priceTicket = chilometers * priceKm;
     
-    let offerta = 'Offerta standard';
+    let offerta = 'Biglietto standard';
 
     if(range == 'minorenne'){
         const priceDiscounted20 = priceTicket * discount20 / 100;
@@ -41,9 +41,24 @@ buttonGenerate.addEventListener('click', function(){
     document.getElementById('offerta').innerHTML = offerta;
 
     // Stampare prezzo
-    document.getElementById('prezzobiglietto').innerHTML = priceTicket.toFixed(2);
+    document.getElementById('prezzobiglietto').innerHTML = `
+    ${priceTicket.toFixed(2)} &euro;
+    `;
 
     // Stampare carrozza e codice cp
     document.getElementById('carrozza').innerHTML = carrozza;
     document.getElementById('codice').innerHTML = cp;
+
+    // Mostrare contenuto
+    document.getElementById('biglietto'). classList.remove('hidden');
+
+    // Resettare contenuto
+    const buttonReset = document.getElementById('reset');
+
+    buttonReset.addEventListener('click', function(){
+        userName.value = '';
+        chilometers.value = '';
+        range.value = '';
+        document.getElementById('biglietto').classList.add('hidden');
+    })
 })

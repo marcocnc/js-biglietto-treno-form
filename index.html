@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="container">
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
        <div class="cta">
             <div class="row">
              <div class="col">
@@ -17,13 +18,14 @@
                 </div>
              <div class="col">
                     <h3>Km da percorrere</h3>
-                    <input type="text" id="km" placeholder="Km da percorrere">
+                    <input type="number" id="km" placeholder="Km">
                 </div>
                 <div class="col">
-                    <h3>Selezionare fascia d'età</h3>
+                    <h3>Fascia d'età</h3>
                     <select id="agerange">
+                        <option>Seleziona fascia d'età</option>
                         <option value="minorenne">Minorenne</option>
-                        <option value="maggiorenne">Maggiorenne</option>
+                        <option value="maggiorenne">Adulto</option>
                         <option value="over65">Over 65</option>
                     </select>
                 </div>
@@ -36,12 +38,13 @@
     
         <!-- Biglietto -->
         <div class="row">
-            <h2>Il tuo biglietto</h2>
+            <h2>IL TUO BIGLIETTO</h2>
         </div>
-        <div id="biglietto">
+        <div id="biglietto" class="hidden">
+            <h3>Dettagli passeggero</h3>
             <div id="info-biglietto">
                 <div class="viaggiatore">
-                    <h2>Nome Utente</h2>
+                    <h3>Nome Utente</h3>
                     <h4 id="utente"></h4>
                 </div>
                 <div class="dati">
